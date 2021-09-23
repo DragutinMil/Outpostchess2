@@ -26,7 +26,7 @@
                 <div class="start grid-check2">
                      <div class="grid-check ">
                        <div class="flex-center">
-                          <input type="checkbox" name="" id="">
+                          <input type="checkbox" name="" id="" v-model="player">
                        </div>
                        <div>
                            <p class="left-check-text">Player</p>
@@ -34,7 +34,7 @@
                     </div >
                     <div class="grid-check ">
                          <div class="flex-center">
-                           <input type="checkbox" name="" id="">
+                           <input type="checkbox" name="" id="" v-model="organizer">
                            </div>
                            <div>
                            <p class="left-check-text">Organizer</p>
@@ -42,7 +42,7 @@
                       </div>
                       <div class="grid-check ">
                            <div class="flex-center">
-                                <input type="checkbox" name="" id="">
+                                <input type="checkbox" name="" id="" v-model="admin">
                           </div>
                           <div>
                                 <p class="left-check-text">Club admin</p>
@@ -53,15 +53,15 @@
                     
                       <div class="grid-check">
                           <div class="flex-center">
-                          <input type="checkbox" name="" id=""></div>
+                          <input type="checkbox" name="" id="" v-model="arbiter"></div>
                           <div><p class="left-check-text">Arbiter</p></div>
                       </div>
                       <div class="grid-check">
-                          <div class="flex-center"><input class="checkbox1" type="checkbox" name="" ></div>
+                          <div class="flex-center"><input class="checkbox1" type="checkbox" name=""  v-model="trainer"></div>
                           <div class="left-check-text"><p>Trainer</p></div>
                       </div>
                      <div class="grid-check">
-                          <div class="flex-center"><input type="checkbox" name="" id=""></div>
+                          <div class="flex-center"><input type="checkbox" name="" id="" v-model="other"></div>
                           <div class="left-check-text"><p>Other</p></div>
                      </div>
                 </div>
@@ -151,7 +151,13 @@ export default {
           fetch('https://sah.fly.dev/api/v2/signup', {
           method:'POST',
           headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify( { email: this.emailogin, password: this.pass1 } )
+          body: JSON.stringify( { email: this.emailogin, password: this.pass1, 
+          PLAYER:this.player,
+          ORGANIZER:this.organizer, 
+          ARBITER:this.arbiter, 
+          CLUBADMIN:this.admin, 
+          OTHER:this.other,
+          trainer:this.trainer} )
           })
             .then(response => response.json())
             .then(data => console.log(data));

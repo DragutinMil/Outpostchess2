@@ -26,9 +26,9 @@
       height: 33px;
       background-image: url(../assets/search_24px.png);
       background-repeat:no-repeat;
-      background-position-x: 15px;
+      background-position-x: 22px;
       background-position-y: 6px;
-      padding-left:40px;
+      padding-left:60px;
       font-size: 14px;
       color:#C7C9D0;
       cursor:pointer;
@@ -36,7 +36,7 @@
     }
 #middle1{
     display:grid;
-    grid-template-columns: 90% 10%;
+    grid-template-columns: 95% 5%;
     margin-top:50px;
     
 }
