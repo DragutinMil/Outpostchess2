@@ -13,6 +13,25 @@
                      <div id="second-part"> <p  id="category-text">Category</p>  <img id="img-category" src="../assets/linije.png" alt=""> </div>
                     
                 </div>
+                <div class="search">
+                    <div class="search-header">No.</div>
+                    <div class="search-header">Name&Surname</div>
+                    <div class="search-header">Country</div>
+                    <div class="search-header">City</div>
+                    <div class="search-header">Age</div>
+                    <div class="search-header">Gender</div>
+                    <div class="search-header">Rating</div>
+                    <div class="search-header">Title</div>
+                    <div class="search-header">Interested in</div>
+                </div>
+                <div class="search-res">
+
+                </div>
+                <div class="search-res"></div>
+                <div class="search-res"></div>
+                <div class="search-res"></div>
+                <div class="search-res"></div>
+               
               </div>
             <div></div>
       </div>   
@@ -73,20 +92,39 @@ export default {
       
       display:flex;
       justify-content: center;
-       align-items: center;
-  
+      align-items: center;
       border: 0.5px solid rgba(111, 115, 129, 0.5);
-      height: 45px;
+      height: 46px;
       padding-left:20px;
       border-radius: 0 26px 26px 0;
-      width:15%;
-     
+      width:15%; 
       color:#6F7381;
       cursor:pointer;
     }
+     #second-part:hover{
+       opacity: 0.7;
+     }
     #img-category{
       height: 15px;
       margin:0px 0 0 20px; 
     }
-    
+    .search{
+      display:grid;
+      grid-template-columns:8% 24% 10% 10% 8% 10% 8% 8% 14% ;
+      background-color:#202122;
+      height: 62px;
+      margin:40px 0 20px 0;
+      color:#FFFFFF;
+      align-items: center;
+
+    }
+    .search-res{
+      background-color:#202122;
+      height: 54px;
+      margin:20px 0 20px 0;
+    }
+    .search-header{
+      font-size: 14px
+
+    }
 </style>
